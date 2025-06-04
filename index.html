@@ -15,7 +15,12 @@
       <div><span id="minutes">0</span><small>Minuten</small></div>
       <div><span id="seconds">0</span><small>Sekunden</small></div>
     </div>
-    <div ><span id="credentials"><small>Made by Moritz B.</small></span></div>
+    <footer>
+      <small>Made by Moritz B.</small>
+    </footer>
+    <noscript>
+      <p class="no-js-warning">Bitte JavaScript aktivieren, um den Countdown zu sehen.</p>
+    </noscript>
   </div>
 
   <script>
@@ -26,7 +31,10 @@
       const distance = targetDate - now;
 
       if (distance < 0) {
-        document.getElementById("countdown").innerHTML = "<h2>Countdown abgelaufen!</h2>";
+        document.getElementById("countdown").innerHTML = `
+          <div style="flex: 1 1 100%;">
+            <h2>Countdown abgelaufen!</h2>
+          </div>`;
         return;
       }
 
